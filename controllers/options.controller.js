@@ -1,4 +1,4 @@
 module.exports = {
-    delete: () => {}, 
-    add: () => {}
+    delete: (req, res) => {}, 
+    addVote: (req, res) => {}
 }; 

@@ -1,6 +1,6 @@
 module.exports = {
-    get: () => {}, 
-    create: ()=> {}, 
-    optionCreate: () => {}, 
-    delete: () => {}
+    get: (req, res) => {}, 
+    create: (req, res)=> {}, 
+    optionCreate: (req, res) => {}, 
+    delete: (req, res) => {}
 }
