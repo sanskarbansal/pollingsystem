@@ -1,14 +1,14 @@
-const mongoose = require('mongoose'); 
-mongoose.connect('mongodb://localhost:27017/pollingdb', {useNewUrlParser: true});
+const mongoose = require("mongoose");
 
-const db = mongoose.connection; 
+mongoose.connect(`mongodb://localhost:${process.env.DB_PORT}/${process.env.DB_NAME}`, { useNewUrlParser: true });
 
-db.on('error', (err) => {
-    console.log("Error while connecting to database."); 
-}); 
+const db = mongoose.connection;
+
+db.on("error", (err) => {
+    console.log("Error while connecting to database.");
+});
 db.once("open", () => {
-    console.log("Database connected successfully.")
-}); 
+    console.log("Database connected successfully.");
+});
 
-
-module.exports = db; 
+module.exports = db;

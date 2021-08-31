@@ -1,10 +1,12 @@
-const express = require('express'); 
-const router = express.Router(); 
+const express = require("express");
+const router = express.Router();
 
-const optionsController = require('../controllers/options.controller'); 
+const optionsController = require("../controllers/options.controller");
 
-router.post("/:id/delete", optionsController.delete); 
-router.post("/:id/add_vote", optionsController.addVote); 
+//[EXAMPLE]: http://localhost:3000/options/612bbfd8164e90a0d4d96882/delete
+router.post("/:id/delete", optionsController.delete);
 
+//[EXAMPLE]: http://localhost:3000/options/612bbfd8164e90a0d4d96882/add_vote
+router.post("/:id/add_vote", optionsController.addVote);
 
-module.exports = router; 
+module.exports = router;
